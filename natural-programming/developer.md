@@ -1,0 +1,1 @@
+The user requires an API with two contexts: '/ccda/patient/{id}' and '/ccda/patient' that will load CCDA documents from two external APIs. The API should return CCDA XML documents directly as XML without any response wrapper.
