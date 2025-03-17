@@ -9,7 +9,7 @@ configurable map<string> patientIds = {
 service /patients on new http:Listener(9091) {
     
     // Get CCDA document for specific patient
-    resource function get [string id]/ccda() returns xml|error {
+    resource function get patients/[string id]/ccda() returns xml|error {
         if !patientIds.hasKey(id) {
             return error("Patient not found: " + id);
         }
